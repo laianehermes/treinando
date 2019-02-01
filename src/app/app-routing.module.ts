@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './auth/pages/auth/auth.component';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { RegisterComponent } from './auth/pages/register/register.component';
+import { AuthGuard } from './auth/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'inicio', pathMatch: 'full', canActivate: [ AuthGuard ], loadChildren: './dashboard/dashboard.module#DashboardModule' },
